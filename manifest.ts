@@ -1,0 +1,1 @@
+import type {MetadataRoute} from 'next';export default function manifest():MetadataRoute.Manifest{return{name:'Ευδοξία Τσιτάκη | Διαιτολόγος – Διατροφολόγος',short_name:'Correct Eat',description:'Εξατομικευμένη διατροφική υποστήριξη',start_url:'/',display:'standalone',background_color:'#f6efe4',theme_color:'#6b452e',lang:'el'}}

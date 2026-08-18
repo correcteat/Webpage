@@ -1,13 +1,9 @@
-# Correct Eat Website
+# Correct Eat — Νέο website
 
-Website starter for Correct Eat / Ευδοξία Τσιτάκη.
+Next.js + TypeScript, mobile-first, ελληνικό website για την Ευδοξία Τσιτάκη.
 
-- Static HTML/CSS/JS
-- Responsive mobile design
-- Greek SEO metadata
-- Sections: home, about, services, approach, contact
-- Contact CTA via email
-
-## Deploy
-
-This project can be deployed directly to Vercel or served as a static site.
+## Σημειώσεις
+- Η επίσημη φωτογραφία της Ευδοξίας δεν έχει δοθεί ακόμη και εμφανίζεται ως ξεκάθαρο placeholder.
+- Το επίσημο logo που δόθηκε στο project χρησιμοποιείται ως `public/logo.jpg`.
+- Τηλέφωνο και social links παραμένουν placeholders μέχρι να δοθούν τα επίσημα στοιχεία.
+- Το blog έχει νέα δομή και δείγμα περιεχομένου. Η μεταφορά του `tsitakh.blogspot.com` δεν έχει γίνει ακόμη.
