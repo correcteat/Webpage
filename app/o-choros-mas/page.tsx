@@ -26,7 +26,7 @@ export default function OChorosMasPage() {
 
       <section className="container space-gallery" aria-label="Φωτογραφίες του χώρου μας">
         <figure className="space-photo space-collage">
-          <img src="/choros/choros-collage.webp" alt="Φωτογραφίες από τον χώρο του Correct Eat" loading="lazy" />
+          <img src="/choros/room1.jpg" alt="Ο χώρος του Correct Eat" loading="eager" />
         </figure>
       </section>
 
