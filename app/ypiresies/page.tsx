@@ -1,5 +1,41 @@
 import Link from 'next/link';
+
 export const metadata={title:'Υπηρεσίες',description:'Εξατομικευμένη διατροφική υποστήριξη από την Ευδοξία Τσιτάκη.'};
-const services=[['⚖️','Απώλεια βάρους','Σταδιακή αλλαγή συνηθειών, ρεαλιστικοί στόχοι και παρακολούθηση που εστιάζει στη διάρκεια.'],['🫶','Γαστρεντερικό & IBS','Προσέγγιση συμπτωμάτων και ανοχών με έμφαση στην επάρκεια, την ποικιλία και την καθημερινότητα.'],['🧬','Μεταβολική υγεία','Διατροφική υποστήριξη γύρω από σάκχαρο, ινσουλινοαντίσταση και αλλαγές τρόπου ζωής.'],['🌿','Γυναίκα & κύκλος ζωής','Εγκυμοσύνη, θηλασμός, εμμηνόπαυση και περίοδοι όπου οι ανάγκες μεταβάλλονται.'],['🏃','Αθλητική διατροφή','Οργάνωση ενέργειας, γευμάτων και αποκατάστασης γύρω από την άσκηση.'],['🧒','Παιδική διατροφή','Εκπαίδευση παιδιού και οικογένειας με ήρεμο, απλό και ηλικιακά κατάλληλο τρόπο.'],['💻','Online συνεδρίες','Εξατομικευμένη συνεργασία από όπου κι αν βρίσκεσαι, με ευέλικτη οργάνωση.'],['🏠','Δια ζώσης συνεδρίες','Προσωπική επαφή, αξιολόγηση και παρακολούθηση στο γραφείο.']];
+
+const folders=[
+ ['01','Προγράμματα διατροφής',[
+  'παιδική διατροφή','vegan διατροφή','νηστεία','αθλητική διατροφή','εγκυμοσύνη','τρίτη ηλικία','οικογενειακά προγράμματα','διατροφική εκπαίδευση'
+ ]],
+ ['02','Διατροφικές διαταραχές',[
+  'Διαταραγμένη σχέση με το φαγητό','Νευρική ανορεξία','Νευρική βουλιμία','Αδηφαγική Διαταραχή (Binge eating)','Σύνδρομο Νυχτερινής Υπερφαγίας','Ορθορεξία'
+ ]],
+ ['03','Κλινική διατροφή',[
+  'Δυσλιπιδαιμία (χοληστερίνη, τριγλυκερίδια)','Υπέρταση','Σακχαρώδης Διαβήτης','Αναιμία','Γαστρεντερικές Διαταραχές','Καρδιαγγειακά Νοσήματα','Παθήσεις Πεπτικού συστήματος','Αντιμετώπιση Ευερέθιστου Εντέρου','Σύνδρομο Πολυκυστικών Ωοθηκών'
+ ]],
+ ['04','Θηλασμός',[
+  'Υπολογισμός αναγκών','Θρεπτική διατροφή','Απώλεια βάρους'
+ ]],
+ ['05','Εγκυμοσύνη',[
+  'Υπολογισμός αναγκών','Θρεπτική διατροφή','Απώλεια βάρους'
+ ]],
+ ['06','Online διατροφή',[
+  'απώλεια βάρους','πρόσληψη βάρους','διατήρηση βάρους','εξατομικευμένο πρόγραμμα διατροφής, συνταγές, συμβουλευτική, στοχοθεσία','Θα χρειαστείς: οικιακή ζυγαριά και μεζούρα.'
+ ]],
+ ['07','Διαχείριση βάρους',[
+  'απώλεια βάρους','πρόσληψη βάρους','διατήρηση βάρους','εξατομικευμένο πρόγραμμα διατροφής, συνταγές, συμβουλευτική, στοχοθεσία, μετρήσεις με λιπομετρητή in body 120 και μεζούρα'
+ ]],
+];
+
 const process=[['01','Αξιολόγηση','Καταγράφουμε το ιστορικό, τους στόχους, τη ρουτίνα, τις δυσκολίες και τις προτεραιότητές σου.'],['02','Σχεδιασμός','Δημιουργούμε ένα πρακτικό πλαίσιο που μπορείς να εφαρμόσεις στην καθημερινότητα.'],['03','Παρακολούθηση','Εξετάζουμε τι λειτουργεί και κάνουμε στοχευμένες αλλαγές χωρίς «τιμωρία».'],['04','Εκπαίδευση','Στόχος είναι να κατανοείς το γιατί πίσω από τις επιλογές και να αποκτάς αυτονομία.']];
-export default function Services(){return <main><section className="page-hero"><div className="container"><div className="eyebrow">Υπηρεσίες · Correct Eat</div><h1>Διατροφική υποστήριξη που προσαρμόζεται σε εσένα.</h1><p>Οι ανάγκες αλλάζουν από άνθρωπο σε άνθρωπο. Γι’ αυτό η συνεργασία ξεκινά από τη δική σου εικόνα και οργανώνεται γύρω από το τι έχει πραγματικά σημασία.</p></div></section><section className="section"><div className="container"><div className="section-head modern-head"><div><div className="eyebrow">Βρες τον τομέα σου</div><h2>Εξειδικευμένες κατευθύνσεις.<br/>Μία κοινή βάση.</h2></div><p>Επιστημονική γνώση, εξατομίκευση και πρακτική εφαρμογή. Χωρίς μία λύση για όλους.</p></div><div className="services-grid">{services.map(([icon,title,text])=><article className="service" key={title}><div className="icon">{icon}</div><h3>{title}</h3><p>{text}</p><Link className="btn ghost" href="/epikoinonia#rantevou">Συζήτησε τη συνεργασία →</Link></article>)}</div></div></section><section className="section section-soft"><div className="container"><div className="section-head modern-head"><div><div className="eyebrow">Η διαδικασία</div><h2>Από την πρώτη συνεδρία<br/>μέχρι την ουσιαστική αλλαγή.</h2></div><p>Η παρακολούθηση δεν είναι έλεγχος. Είναι χώρος για προσαρμογή, εκπαίδευση και σταθερή πρόοδο.</p></div><div className="process-panel">{process.map(([n,t,d])=><div className="process-row" key={n}><strong>{n}</strong><h3>{t}</h3><p>{d}</p></div>)}</div></div></section><section className="section"><div className="container cta-modern"><div className="eyebrow eyebrow-light">ΔΕΝ ΞΕΡΕΙΣ ΑΠΟ ΠΟΥ ΝΑ ΞΕΚΙΝΗΣΕΙΣ;</div><h2>Ξεκίνα με μια συζήτηση.</h2><p>Πες μου τι σε απασχολεί και ποιος είναι ο στόχος σου. Από εκεί καθορίζουμε το κατάλληλο πλαίσιο συνεργασίας.</p><Link className="btn ghost btn-large" href="/epikoinonia#rantevou">Κλείσε ραντεβού ↗</Link></div></section></main>}
+
+export default function Services(){return <main>
+ <section className="page-hero"><div className="container"><div className="eyebrow">Υπηρεσίες · Correct Eat</div><h1>Διατροφική υποστήριξη που προσαρμόζεται σε εσένα.</h1><p>Όλες οι υπηρεσίες οργανωμένες σε ξεχωριστούς φακέλους, ώστε να βρίσκεις εύκολα αυτό που σε ενδιαφέρει.</p></div></section>
+ <section className="section"><div className="container"><div className="section-head modern-head"><div><div className="eyebrow">Οι υπηρεσίες μου</div><h2>Διάλεξε τον φάκελο<br/>που σε αφορά.</h2></div><p>Κάθε φάκελος ανοίγει για να εμφανίσει αναλυτικά τις υπηρεσίες, ακριβώς όπως παρουσιάζονται στο υλικό σου.</p></div>
+  <div className="service-folders">{folders.map(([number,title,items])=><details className="service-folder" key={title}>
+   <summary><span className="folder-number">{number}</span><span className="folder-icon">▱</span><span className="folder-title">{title}</span><span className="folder-arrow">+</span></summary>
+   <div className="folder-content"><ul>{items.map(item=><li key={item}>{item}</li>)}</ul><Link className="btn ghost" href="/epikoinonia#rantevou">Συζήτησε τη συνεργασία →</Link></div>
+  </details>)}</div>
+ </div></section>
+ <section className="section section-soft"><div className="container"><div className="section-head modern-head"><div><div className="eyebrow">Η διαδικασία</div><h2>Από την πρώτη συνεδρία<br/>μέχρι την ουσιαστική αλλαγή.</h2></div><p>Η παρακολούθηση δεν είναι έλεγχος. Είναι χώρος για προσαρμογή, εκπαίδευση και σταθερή πρόοδο.</p></div><div className="process-panel">{process.map(([n,t,d])=><div className="process-row" key={n}><strong>{n}</strong><h3>{t}</h3><p>{d}</p></div>)}</div></div></section>
+ <section className="section"><div className="container cta-modern"><div className="eyebrow eyebrow-light">ΔΕΝ ΞΕΡΕΙΣ ΑΠΟ ΠΟΥ ΝΑ ΞΕΚΙΝΗΣΕΙΣ;</div><h2>Ξεκίνα με μια συζήτηση.</h2><p>Πες μου τι σε απασχολεί και ποιος είναι ο στόχος σου. Από εκεί καθορίζουμε το κατάλληλο πλαίσιο συνεργασίας.</p><Link className="btn ghost btn-large" href="/epikoinonia#rantevou">Κλείσε ραντεβού ↗</Link></div></section>
+ </main>}
