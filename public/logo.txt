@@ -1,1 +1,0 @@
-The logo binary is stored at repository root as logo.jpg.
