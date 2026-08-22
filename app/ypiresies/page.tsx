@@ -4,11 +4,11 @@ export const metadata={title:'Υπηρεσίες',description:'Εξατομικ�
 
 type Folder=[string,string,string[]];
 const folders:Folder[]=[
- ['01','Προγράμματα διατροφής',['παιδική διατροφή','vegan διατροφή','νηστεία','αθλητική διατροφή','εγκυμοσύνη','τρίτη ηλικία','οικογενειακά προγράμματα','διατροφική εκπαίδευση']],
+ ['01','Προγράμματα διατροφής',['παιδική διατροφή','vegan διατροφή','νηστεία','αθλητική διατροφή','εμμηνόπαυση','τρίτη ηλικία','οικογενειακά προγράμματα','διατροφική εκπαίδευση']],
  ['02','Διατροφικές διαταραχές',['Διαταραγμένη σχέση με το φαγητό','Νευρική ανορεξία','Νευρική βουλιμία','Αδηφαγική Διαταραχή (Binge eating)','Σύνδρομο Νυχτερινής Υπερφαγίας','Ορθορεξία']],
  ['03','Κλινική διατροφή',['Δυσλιπιδαιμία (χοληστερίνη, τριγλυκερίδια)','Υπέρταση','Σακχαρώδης Διαβήτης','Αναιμία','Γαστρεντερικές Διαταραχές','Καρδιαγγειακά Νοσήματα','Παθήσεις Πεπτικού συστήματος','Αντιμετώπιση Ευερέθιστου Εντέρου','Σύνδρομο Πολυκυστικών Ωοθηκών']],
  ['04','Θηλασμός',['Υπολογισμός αναγκών','Θρεπτική διατροφή','Απώλεια βάρους']],
- ['05','Εγκυμοσύνη',['Υπολογισμός αναγκών','Θρεπτική διατροφή','Απώλεια βάρους']],
+ ['05','Εμμηνόπαυση',['Υπολογισμός αναγκών','Θρεπτική διατροφή','Απώλεια βάρους']],
  ['06','Online διατροφή',['απώλεια βάρους','πρόσληψη βάρους','διατήρηση βάρους','εξατομικευμένο πρόγραμμα διατροφής, συνταγές, συμβουλευτική, στοχοθεσία','Θα χρειαστείς: οικιακή ζυγαριά και μεζούρα.']],
  ['07','Διαχείριση βάρους',['απώλεια βάρους','πρόσληψη βάρους','διατήρηση βάρους','εξατομικευμένο πρόγραμμα διατροφής, συνταγές, συμβουλευτική, στοχοθεσία, μετρήσεις με λιπομετρητή in body 120 και μεζούρα']],
 ];
@@ -25,8 +25,7 @@ export default function Services(){return <main>
  <section className="section"><div className="container"><div className="section-head modern-head"><div><div className="eyebrow">Οι υπηρεσίες μου</div><h2>Διάλεξε τον φάκελο<br/>που σε αφορά.</h2></div><p>Κάθε φάκελος ανοίγει για να εμφανίσει αναλυτικά τις υπηρεσίες, ακριβώς όπως παρουσιάζονται στο υλικό σου.</p></div>
   <div className="service-folders">{folders.map(([number,title,items])=><details className="service-folder" key={number}>
    <summary><span className="folder-number">{number}</span><span className="folder-icon">▱</span><span className="folder-title">{title}</span><span className="folder-arrow">+</span></summary>
-   <div className="folder-content"><ul>{items.map(item=><li key={item}>{item}</li>)}</ul><Link className="btn ghost" href="/epikoinonia#rantevou">Συζήτησε τη συνεργασία →</Link></div>
-  </details>)}</div>
+   <div className="folder-content"><ul>{items.map(item=><li key={item}>{item}</li>)}</ul><Link className="btn ghost" href="/epikoinonia#rantevou">Συζήτησε τη συνεργασία →</Link></div></details>)}</div>
  </div></section>
  <section className="section section-soft"><div className="container"><div className="section-head modern-head"><div><div className="eyebrow">Η διαδικασία</div><h2>Από την πρώτη συνεδρία<br/>μέχρι την ουσιαστική αλλαγή.</h2></div><p>Η παρακολούθηση δεν είναι έλεγχος. Είναι χώρος για προσαρμογή, εκπαίδευση και σταθερή πρόοδο.</p></div><div className="process-panel">{process.map(([n,t,d])=><div className="process-row" key={n}><strong>{n}</strong><h3>{t}</h3><p>{d}</p></div>)}</div></div></section>
  <section className="section"><div className="container cta-modern"><div className="eyebrow eyebrow-light">ΔΕΝ ΞΕΡΕΙΣ ΑΠΟ ΠΟΥ ΝΑ ΞΕΚΙΝΗΣΕΙΣ;</div><h2>Ξεκίνα με μια συζήτηση.</h2><p>Πες μου τι σε απασχολεί και ποιος είναι ο στόχος σου. Από εκεί καθορίζουμε το κατάλληλο πλαίσιο συνεργασίας.</p><Link className="btn ghost btn-large" href="/epikoinonia#rantevou">Κλείσε ραντεβού ↗</Link></div></section>
