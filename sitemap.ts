@@ -1,2 +1,12 @@
-import type {MetadataRoute} from 'next';import {articles} from '../lib/articles';
-export default function sitemap():MetadataRoute.Sitemap{const base='https://webpage-three-sage.vercel.app';const now=new Date();const pages=['/','/sxetika-me-emena','/ypiresies','/arthra','/epikoinonia'].map(path=>({url:base+path,lastModified:now}));const posts=articles.map(a=>({url:`${base}/arthra/${a.slug}`,lastModified:now}));return [...pages,...posts]}
+import type { MetadataRoute } from 'next';
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const base = 'https://webpage-correcteat1.vercel.app';
+  const now = new Date();
+  const pages = ['/', '/sxetika-me-emena', '/ypiresies', '/arthra', '/epikoinonia'];
+
+  return pages.map((path) => ({
+    url: base + path,
+    lastModified: now,
+  }));
+}
