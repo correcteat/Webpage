@@ -1,0 +1,54 @@
+import './space.css';
+
+const photos = [
+  { src: '/choros/01.webp', alt: 'Χώρος υποδοχής του Correct Eat', className: 'wide' },
+  { src: '/choros/02.webp', alt: 'Χώρος μέτρησης και αξιολόγησης σώματος' },
+  { src: '/choros/03.webp', alt: 'Χώρος εργασίας και συμβουλευτικής' },
+  { src: '/choros/04.webp', alt: 'Χώρος αναμονής του Correct Eat' },
+];
+
+export default function OChorosMasPage() {
+  return (
+    <main className="space-page">
+      <section className="space-hero">
+        <div className="space-hero-overlay" />
+        <div className="container space-hero-content">
+          <span className="space-kicker">CORRECT EAT</span>
+          <h1>Ο χώρος μας</h1>
+          <p>Ένας ζεστός, ήρεμος και προσωπικός χώρος, σχεδιασμένος για να νιώθεις άνετα από την πρώτη στιγμή.</p>
+        </div>
+      </section>
+
+      <section className="container space-intro">
+        <div>
+          <span className="space-kicker">Η εμπειρία μας</span>
+          <h2>Ένας χώρος που δημιουργήθηκε με φροντίδα.</h2>
+        </div>
+        <p>
+          Στο Correct Eat θέλουμε η διατροφική συμβουλευτική να είναι κάτι περισσότερο από ένα ραντεβού.
+          Γι’ αυτό δημιουργήσαμε έναν χώρο φωτεινό και φιλόξενο, όπου μπορούμε να συζητήσουμε με ηρεμία,
+          να αξιολογήσουμε την πορεία σου και να δουλέψουμε μαζί πάνω στους στόχους σου.
+        </p>
+      </section>
+
+      <section className="container space-gallery" aria-label="Φωτογραφίες του χώρου μας">
+        {photos.map((photo) => (
+          <figure key={photo.src} className={`space-photo ${photo.className ?? ''}`}>
+            <img src={photo.src} alt={photo.alt} loading="lazy" />
+          </figure>
+        ))}
+      </section>
+
+      <section className="space-cta">
+        <div className="container space-cta-inner">
+          <div>
+            <span className="space-kicker">CORRECT EAT</span>
+            <h2>Σε περιμένω στον χώρο μας.</h2>
+            <p>Κλείσε το ραντεβού σου online ή δια ζώσης.</p>
+          </div>
+          <a className="btn primary" href="https://cal.com/ευδοξια-τσιτακη-mhw6ym">Κλείσε ραντεβού ↗</a>
+        </div>
+      </section>
+    </main>
+  );
+}
