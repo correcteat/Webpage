@@ -1,6 +1,18 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import './space.css';
 
 export default function OChorosMasPage() {
+  const [roomImage, setRoomImage] = useState('');
+
+  useEffect(() => {
+    fetch('/choros/room1.jpg.b64')
+      .then((response) => response.text())
+      .then((base64) => setRoomImage(`data:image/jpeg;base64,${base64.trim()}`))
+      .catch(() => setRoomImage(''));
+  }, []);
+
   return (
     <main className="space-page">
       <section className="space-hero">
@@ -24,9 +36,9 @@ export default function OChorosMasPage() {
         </p>
       </section>
 
-      <section className="container space-gallery" aria-label="Φωτογραφίες του χώρου μας">
+      <section className="container space-gallery" aria-label="Φωτογραφία του χώρου μας">
         <figure className="space-photo space-collage">
-          <img src="/choros/room1.jpg" alt="Ο χώρος του Correct Eat" loading="eager" />
+          {roomImage && <img src={roomImage} alt="Ο χώρος του Correct Eat" loading="eager" />}
         </figure>
       </section>
 
