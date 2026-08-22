@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import './globals.css';
+import './cta-fix.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 const productionUrl=process.env.VERCEL_PROJECT_PRODUCTION_URL?`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`:'https://cor-project.vercel.app';
