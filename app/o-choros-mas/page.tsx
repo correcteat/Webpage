@@ -1,12 +1,5 @@
 import './space.css';
 
-const photos = [
-  { src: '/choros/01.webp', alt: 'Χώρος υποδοχής του Correct Eat', className: 'wide' },
-  { src: '/choros/02.webp', alt: 'Χώρος μέτρησης και αξιολόγησης σώματος' },
-  { src: '/choros/03.webp', alt: 'Χώρος εργασίας και συμβουλευτικής' },
-  { src: '/choros/04.webp', alt: 'Χώρος αναμονής του Correct Eat' },
-];
-
 export default function OChorosMasPage() {
   return (
     <main className="space-page">
@@ -32,11 +25,9 @@ export default function OChorosMasPage() {
       </section>
 
       <section className="container space-gallery" aria-label="Φωτογραφίες του χώρου μας">
-        {photos.map((photo) => (
-          <figure key={photo.src} className={`space-photo ${photo.className ?? ''}`}>
-            <img src={photo.src} alt={photo.alt} loading="lazy" />
-          </figure>
-        ))}
+        <figure className="space-photo space-collage">
+          <img src="/choros/choros-collage.webp" alt="Φωτογραφίες από τον χώρο του Correct Eat" loading="lazy" />
+        </figure>
       </section>
 
       <section className="space-cta">
